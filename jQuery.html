@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./jQuery.css">
+    <title>BOX SHADOW GENERATOR</title>
+</head>
+<body>
+    <div class="container">
+        <div class="setting_container">
+            <div class="header">
+                <h1 class="setting_container-title">css<br>box-shadow <br>генератор</h1>
+                <h2 class="setting_container-subtitle">Настройте параметры тени: </h2>
+                <div class="type">
+                    <div class="type-item">Внешняя</div>
+                    <div class="type-btn_box">
+                        <button class="type-btn"></button>
+                    </div>
+                    <div class="type-item">Внутренняя</div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="main_1">
+                    <div class="setting_item">
+                        <p class="setting-descr">Горизонтальное смещение</p>
+                        <div class="sliderContainer rangeLabel">
+                            <div class="min">0px</div>
+                            <input class="slider hOffset slide" type="range" class="range" max="100" min="0" id="my" value="4">    
+                            <div class="max">100px</div>
+                            <div class="buble b">0</div>
+                        </div>
+                    </div>
+                    <div class="setting_item">
+                        <p class="setting-descr">Вертикальное смещение</p>
+                        <div class="sliderContainer rangeLabel">
+                            <div class="min">0px</div>
+                            <input class="slider vOffset slide" type="range" class="range" max="100" min="0" id="my" value="4">    
+                            <div class="max">100px</div>
+                            <div class="buble b">0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_2">
+                    <div class="setting_item">
+                        <p class="setting-descr">Размытие</p>
+                        <div class="sliderContainer rangeLabel">
+                            <div class="min">0px</div>
+                            <input class="slider blur slide" type="range" class="range" max="100" min="0" id="my" value="4">    
+                            <div class="max">100px</div>
+                            <div class="buble b">0</div>
+                        </div>
+                    </div>
+                    <div class="setting_item">
+                        <p class="setting-descr">Растяжение</p>
+                        <div class="sliderContainer rangeLabel">
+                            <div class="min">0px</div>
+                            <input class="slider stretching slide" type="range" class="range" max="100" min="0" id="my" value="4">    
+                            <div class="max">100px</div>
+                            <div class="buble b">0</div>
+                        </div>
+                    </div>
+                </div>
+               <div class="main_3">
+                <div class="setting_item">
+                    <p class="setting-descr">Цвет тени</p>
+                    <input type="color" class="color colorInput" value="#223c50">
+                </div>
+                <div class="setting_item">
+                    <p class="setting-descr">Прозрачность</p>
+                    <div class="sliderContainer">
+                        <div class="min">0</div>
+                        <input class="slider ghost" type="range" class="range" max="1" min="0" id="my" value="0.2" step="0.01">    
+                        <div class="max">1</div>
+                        <div class="ghostBuble b">0</div>
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+        <div class="result_container">
+            <div class="example">
+                <div class="result">
+                    <div class="block">
+                    </div>
+                </div>
+                <div class="code_container">
+                    <h4 class="code-title">
+                        <span class="colored">{CSS}</span> код для вставки:
+                    </h4>
+                    <div class="code">
+                        <div class="fields">
+                            <div class="webkit_field field">
+                                <span class="attribute">-webkit-box-shadow:</span>
+                                <span class="number webkit_number hOffset_number">4px</span>
+                                <span class="number webkit_number vOffset_number">4px</span>
+                                <span class="number webkit_number blur_number">8px</span>
+                                <span class="number webkit_number stretching_number">0px</span>
+                                <span class="rgba">rgba</span>
+                                <div class="rgba_numbers">
+                                    (34, 60, 80, 0.2)
+                                </div>
+                                <span class="inset"></span>;
+                            </div>
+                            <div class="moz_field field">
+                                <span class="attribute">-moz-box-shadow:</span>
+                                <span class="number moz_number hOffset_number">4px</span>
+                                <span class="number moz_number vOffset_number">4px</span>
+                                <span class="number moz_number blur_number">8px</span>
+                                <span class="number moz_number stretching_number">0px</span>
+                                <span class="rgba">rgba</span>
+                                <div class="rgba_numbers">
+                                    (34, 60, 80, 0.2)
+                                </div>
+                                <span class="inset"></span>;
+                            </div>
+                            <div class="default_field field">
+                                <span class="attribute">box-shadow:</span>
+                                <span class="number default_number hOffset_number">4px</span>
+                                <span class="number default_number vOffset_number">4px</span>
+                                <span class="number default_number blur_number">8px</span>
+                                <span class="number default_number stretching_number">0px</span>
+                                <span class="rgba">rgba</span>
+                                <div class="rgba_numbers">
+                                    (34, 60, 80, 0.2)
+                                </div>
+                                <span class="inset"></span>;
+                              </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <div class="castomize">
+                        <h3 class="castomize_title">Кастомизируйте блок:</h3>
+                        <label class="castomize_label">
+                            <div class="castomize-descr">Цвет фона</div>
+                            <input type="color" class="castomize_btn background colorInput" value="#f9f9fd">
+                        </label>
+                        <label class="castomize_label">
+                            <div class="castomize-descr">Цвет блока</div>
+                            <input type="color" class="castomize_btn box colorInput" value="#ffffff">
+                        </label>
+                    </div>
+                    <div class="ready_boxes">
+                        <div class="ready_boxes-title">
+                            Готовые тени:
+                        </div>
+                        <div class="ready_boxes-container">
+                            <div class="ready_box-item itemOne">1</div>
+                            <div class="ready_box-item itemTwo">2</div>
+                            <div class="ready_box-item itemThree">3</div>
+                            <div class="ready_box-item itemFour">4</div>
+                            <div class="ready_box-item itemFive">5</div>
+                            <div class="ready_box-item itemSix">6</div>
+                            <div class="ready_box-item itemSeven">7</div>
+                            <div class="ready_box-item itemEight">8</div>
+                            <div class="ready_box-item itemNine">9</div>
+                            <div class="ready_box-item itemTen">10</div>
+                        </div>
+                    </div>
+                </footer>
+                    </div>
+   <script src="./jquery-3.6.1.min.js"></script>
+    <script src="./jQuery.js"></script>
+</body>
+</html>
